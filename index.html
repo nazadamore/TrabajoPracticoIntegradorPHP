@@ -27,19 +27,19 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav" style="margin-left: auto;">
                         <li class="nav-item">
-                            <a class="nav-link laconf" href="#">La conferencia</a>
+                            <a class="nav-link laconf" aria-current="page" href="#inicio">La conferencia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Los oradores</a>
+                            <a class="nav-link" aria-current="page" href="#oradores">Los oradores</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">El lugar y la fecha</a>
+                            <a class="nav-link" aria-current="page" href="#lugar">El lugar y la fecha</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Conviértete en orador</a>
+                            <a class="nav-link" aria-current="page" href="#conviertete">Conviértete en orador</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tickets" href="#">Comprar tickets</a>
+                            <a class="nav-link tickets" aria-current="page" href="#tickets">Comprar tickets</a>
                         </li>
                     </ul>
                 </div>
@@ -47,7 +47,7 @@
         </nav>
     </header>
 
-    <div>
+    <div id="inicio">
         <div class="card text-bg-dark ">
             <img src="./img/ba1.jpg" class="card-img imagenMain" alt="imagen fondo ">
             <div class="card-img-overlay contenedorRelleno ">
@@ -75,7 +75,7 @@
     </div>
 
 
-    <section>
+    <section id="oradores">
         <div class="card-group grupo">
             <div class="card cartas">
                 <img class="card-img-top" src="img/steve.jpg" alt="Steve Jobs">
@@ -116,7 +116,7 @@
         </div>
     </section>
 
-    <div class="row fondo-playa">
+    <div class="row fondo-playa" id="lugar">
         <div class="col-6">
             <img class="img-playa" src="./img/honolulu.jpg" alt="playa">
         </div>
@@ -136,12 +136,12 @@
         </div>
     </div>
 
-    <div class="container1 text-center mt-4">
+    <div class="container1 text-center mt-4" id="conviertete">
         <h2 class="fw-normal fs-5">CONVIERTETE EN UN <br> <span class="fw-bold">ORADOR</span></h2>
         <p>Anotate como orador para dar una <u>charla ignite</u>. Cuentanos de qué quiere hablar!</p>
     </div>
 
-    <div class="container mt-4 formu">
+    <div class="container mt-4 formu" id="tickets">
         <form>
             <div class="row mb-3">
                 <div class="col">
@@ -162,6 +162,70 @@
         </form>
     </div>
 
+    <div id="Tipos">
+        <div id="Azul">
+            <h5><b>Estudiante</b></h5>
+            <p>Tienen un descuento</p>
+            <p><b>80%</b></p>
+            <p>*Presentar documentación</p>
+
+        </div>
+
+        <div id="Verde">
+            <h5><b>Trainee</b></h5>
+            <p>Tienen un descuento</p>
+            <p><b>50%</b></p>
+            <p>*Presentar documentación</p>
+        </div>
+
+
+        <div id="Amarillo">
+            <h5><b>Junior</b></h5>
+            <p>Tienen un descuento</p>
+            <p><b>15%</b></p>
+            <p>*Presentar documentación</p>
+        </div>
+    </div>
+
+    <div class="titulo_tickets">
+        <h4 id="Ticket">VENTA</h4>
+        <h2><b>VALOR DE TICKET $200</b></h2>
+    </div>
+    <div id="Venta">
+        <form class="container" id="Caja">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="name" id="nombreUsuario">
+            <label for="apellido">Apellido</label>
+            <input type="text" name="lastname" id="apellidoUsuario">
+            <br>
+            <label for="correo">Correo</label>
+            <br>
+            <input type="email" name="correo" id="correo" placeholder="Correo" required>
+            <br><br>
+
+            <div id="rotulos">
+                <label for="Cantidad">Cantidad</label>
+                <br>
+                <label for="Categoria">Categoria</label>
+            </div>
+
+            <input type="number" name="Cantidad" id="Cantidad" placeholder="Cantidad" required>
+
+            <select name="Categoria" id="Categoria">
+                <option id="Estudiante" value="Estudiante">Estudiante</option>
+                <option id="Trainee" value="Trainee">Trainee</option>
+                <option id="Junior" value="Junior">Junior</option>
+            </select>
+
+            <br>
+            <label for="" id="valorInput"></label>
+
+            <br>
+            <button type="reset" id="Borrar" class="Botones">Borrar</button>
+            <button id="resumen" class="Botones" type="button">Resumen</button>
+        </form>
+    </div>
+
     <footer>
         <div class="footer">
             <a href="#">Preguntas frecuentes</a>
@@ -174,9 +238,12 @@
         </div>
     </footer>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+
 </body>
 
 </html>
